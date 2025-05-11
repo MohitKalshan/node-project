@@ -2,10 +2,13 @@ import express from 'express';
 import { NextFunction, Request, Response } from 'express';
 
 import config from './config/config';
-import routes from './routes/v1/index';
+import routes from './routes/v1';
 
 const app = express();
 const PORT = config.port;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
 

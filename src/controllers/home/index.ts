@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 
-export const getHome = (req: Request, res: Response) => {
+const getHome = (req: Request, res: Response) => {
   res.status(200).send({
     code: 200,
     status: 'success',
-    message: 'Hello, World!',
+    message: 'data fetched successfully',
     data: {
       message: 'Hello, World!',
     },
